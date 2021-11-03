@@ -1,24 +1,24 @@
-SQL HomeWork 2
+п»їSQL HomeWork 2
 
-Подключится к 
+РџРѕРґРєР»СЋС‡РёС‚СЃСЏ Рє 
 Host: 159.69.151.133
 Port: 5056
 User: user_23_x
 Pass: 123
 DB: qa_ddldb_23_x
 
-Создать текстовый файл в котором на против каждой команды напишите sql запрос который выполнит команду.
+РЎРѕР·РґР°С‚СЊ С‚РµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р» РІ РєРѕС‚РѕСЂРѕРј РЅР° РїСЂРѕС‚РёРІ РєР°Р¶РґРѕР№ РєРѕРјР°РЅРґС‹ РЅР°РїРёС€РёС‚Рµ sql Р·Р°РїСЂРѕСЃ РєРѕС‚РѕСЂС‹Р№ РІС‹РїРѕР»РЅРёС‚ РєРѕРјР°РЅРґСѓ.
 
-Текстовый файл выгружайте на гит и скидывайте ссылки на проверку.
+РўРµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р» РІС‹РіСЂСѓР¶Р°Р№С‚Рµ РЅР° РіРёС‚ Рё СЃРєРёРґС‹РІР°Р№С‚Рµ СЃСЃС‹Р»РєРё РЅР° РїСЂРѕРІРµСЂРєСѓ.
 
 SQL_DDL_Joins
 
-Таблица employees
+РўР°Р±Р»РёС†Р° employees
 
-Создать таблицу employees
+РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ employees
 - id. serial,  primary key,
 - employee_name. Varchar(50), not null
-Наполнить таблицу employee 70 строками.
+РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ employee 70 СЃС‚СЂРѕРєР°РјРё.
 
 	==========================================
 create table employees (
@@ -27,18 +27,18 @@ create table employees (
 );
 
 insert into employees (id, employee_name)
-values (default, 'Элла');
+values (default, 'Р­Р»Р»Р°');
 
 select * from employees;
 
 	==========================================
 
-Таблица salary
+РўР°Р±Р»РёС†Р° salary
 
-Создать таблицу salary
+РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ salary
 - id. Serial  primary key,
 - monthly_salary. Int, not null
-Наполнить таблицу salary 15 строками:
+РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ salary 15 СЃС‚СЂРѕРєР°РјРё:
 - 1000
 - 1100
 - 1200
@@ -72,14 +72,14 @@ delete from salary where id = 16;
 
 	==========================================
 
-Таблица employee_salary
+РўР°Р±Р»РёС†Р° employee_salary
 
-Создать таблицу employee_salary
+РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ employee_salary
 - id. Serial  primary key,
 - employee_id. Int, not null, unique
 - salary_id. Int, not null
-Наполнить таблицу salary 40 строками:
-- в 10 строк из 40 вставить несуществующие employee_id
+РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ salary 40 СЃС‚СЂРѕРєР°РјРё:
+- РІ 10 СЃС‚СЂРѕРє РёР· 40 РІСЃС‚Р°РІРёС‚СЊ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРµ employee_id
 
 id      
 1
@@ -142,13 +142,13 @@ delete from employee_salary where id = 41;
 
 	==========================================
 
-Таблица roles
+РўР°Р±Р»РёС†Р° roles
 
-Создать таблицу roles
+РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ roles
 - id. Serial  primary key,
 - role_name. int, not null, unique
-Поменять тип столба role_name с int на varchar(30)
-Наполнить таблицу salary 20 строками:
+РџРѕРјРµРЅСЏС‚СЊ С‚РёРї СЃС‚РѕР»Р±Р° role_name СЃ int РЅР° varchar(30)
+РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ salary 20 СЃС‚СЂРѕРєР°РјРё:
 
 id
 role_name
@@ -210,13 +210,13 @@ select * from roles;
 
 	==========================================
 	
-Таблица roles_employee
+РўР°Р±Р»РёС†Р° roles_employee
 
-Создать таблицу employee_salary
+РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ employee_salary
 - id. Serial  primary key,
-- employee_id. Int, not null, unique (внешний ключ для таблицы employees, поле id)
-- role_id. Int, not null (внешний ключ для таблицы roles, поле id)
-Наполнить таблицу salary 40 строками:
+- employee_id. Int, not null, unique (РІРЅРµС€РЅРёР№ РєР»СЋС‡ РґР»СЏ С‚Р°Р±Р»РёС†С‹ employees, РїРѕР»Рµ id)
+- role_id. Int, not null (РІРЅРµС€РЅРёР№ РєР»СЋС‡ РґР»СЏ С‚Р°Р±Р»РёС†С‹ roles, РїРѕР»Рµ id)
+РќР°РїРѕР»РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ salary 40 СЃС‚СЂРѕРєР°РјРё:
 
 id
 1
