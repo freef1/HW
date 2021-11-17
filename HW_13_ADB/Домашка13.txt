@@ -11,7 +11,7 @@ ADB HW_1
  - .\adb install C:\Users\evgenii\git\001_ToDoList-master\001_ToDoList-master\app\build\outputs\apk\debug\Todolist.apk
  3. Вывести адрес приложения todolist в системе Android
  - .\adb shell pm list "packages -f | grep todolist" (или ./adb shell pm list packages -f | findstr todolist)
-  4. Сделать скриншот запущенного приложения todolist и сразу скопировать на компьютер в одной команде.
+ 4. Сделать скриншот запущенного приложения todolist и сразу скопировать на компьютер в одной команде.
  - adb shell screencap /storage/emulated/0/DCIM/1246.png && adb pull /storage/emulated/0/DCIM/1246.png C:\Users\evgenii\git\HW\HW_13_ADB\ 
  (&& не работают в power shell, сделал через CMD. Так же можно в power shell можно через |)
  5. Вывести в консоль логи приложения todolist
@@ -25,3 +25,6 @@ ADB HW_1
  - сохранение бэкапа всего телефона
  adb restore .../backup.ad
  - возврат телефона к сохраненному бэкапу
+Подключение по WiFi в той же сети, что и компьютер.
+- adb tcpip 5555 (При подключенном через USB кабель)
+- adb connect ip(айпи телефона):port(5555)
