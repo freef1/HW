@@ -1,14 +1,27 @@
 ADB HW_1
 
-—ˆÂÌ‡ËÈ Ì‡ÔË¯ËÚÂ ‚ .txt Ù‡ÈÎ.
-.txt ÒˆÂÌ‡ËÈ Ë .log Ù‡ÈÎ ÔËËÎÓÊÂÌËˇ todolist ‚˚„ÛÊ‡ÈÚÂ Ì‡ GitHub.
-—Ò˚ÎÍÍÛ Ì‡ „ËÚı‡· ÔËÒ˚Î‡ÈÚÂ ‚ ÎÒ.
+–°—Ü–µ–Ω–∞—Ä–∏–π –Ω–∞–ø–∏—à–∏—Ç–µ –≤ .txt —Ñ–∞–π–ª.
+.txt —Å—Ü–µ–Ω–∞—Ä–∏–π –∏ .log —Ñ–∞–π–ª –ø—Ä–∏–∏–ª–æ–∂–µ–Ω–∏—è todolist –≤—ã–≥—Ä—É–∂–∞–π—Ç–µ –Ω–∞ GitHub.
+–°—Å—ã–ª–∫–∫—É –Ω–∞ –≥–∏—Ç—Ö–∞–± –ø—Ä–∏—Å—ã–ª–∞–π—Ç–µ –≤ –ª—Å.
 
-¬Ò∏ ‚ PowerShell 
- 1. ŒÚÓ·‡ÁËÚ¸ ÔÓ‰ÍÎ˛˜∏ÌÌ˚È ‰Â‚‡ÈÒ ‚ ÍÓÌÒÓÎË. - .\adb devices (Ì‡ıÓ‰ˇÒ¸ ‚ Ô‡ÔÍÂ Ò adb.exe, ÎË·Ó ÏÓÊÌÓ ÔÓÔËÒ‡Ú¸ ÔÛÚ¸ ‚ ÒËÒÚÂÏÌÛ˛ ÔÂÂÏÂÌÌÛ˛ path)
- 2. ¬˚‚ÂÒÚË ‡‰ÂÒ ÔËÎÓÊÂÌËˇ todolist ‚ ÒËÒÚÂÏÂ Android - .\adb shell pm list "packages -f | grep todolist" (ËÎË ./adb shell pm list packages -f | findstr todolist)
- 3. ”ÒÚ‡ÌÓ‚ËÚ¸ .apk Ù‡ÈÎ ÔËÎÓÊÂÌËËˇ todolist Ì‡ ÚÂÎÂÙÓÌ Ò ÍÓÏÔ¸˛ÚÂ‡ ˜ÂÂÁ  ADB - .\adb install C:\Users\evgenii\git\001_ToDoList-master\001_ToDoList-master\app\build\outputs\apk\debug\Todolist.apk
- 4. —‰ÂÎ‡Ú¸ ÒÍËÌ¯ÓÚ Á‡ÔÛ˘ÂÌÌÓ„Ó ÔËÎÓÊÂÌËˇ todolist Ë Ò‡ÁÛ ÒÍÓÔËÓ‚‡Ú¸ Ì‡ ÍÓÏÔ¸˛ÚÂ ‚ Ó‰ÌÓÈ ÍÓÏ‡Ì‰Â. - adb shell screencap /storage/emulated/0/DCIM/1246.png && adb pull /storage/emulated/0/DCIM/1246.png C:\Users\evgenii\git\HW\HW_13_ADB\ (&& ÌÂ ‡·ÓÚ‡˛Ú ‚ power shell, Ò‰ÂÎ‡Î ˜ÂÂÁ CMD)
- 5. ¬˚‚ÂÒÚË ‚ ÍÓÌÒÓÎ¸ ÎÓ„Ë ÔËÎÓÊÂÌËˇ todolist - adb shell "logcat | grep -rnw todolist" (ËÎË adb logcat | findstr -rnw todolist ‚ CMD)
- 6. —ÍÓÔËÓ‚‡Ú¸ ÎÓ„Ë ÔËÎÓÊÂÌËˇ todolist Ì‡ ÍÓÏÔ¸˛ÚÂ. - adb shell "logcat | grep -rnw todolist" > C:\Users\evgenii\git\HW\HW_13_ADB\log_todolist.log
- 7. ”‰‡ÎËÚ¸ ÔËÎÓÊÂÌËÂ todolist Ò ÚÂÎÂÙÓÌ‡ ˜ÂÂÁ ADB - adb uninstall com.android.todolist
+–í—Å—ë –≤ PowerShell 
+ 1. –û—Ç–æ–±—Ä–∞–∑–∏—Ç—å –ø–æ–¥–∫–ª—é—á—ë–Ω–Ω—ã–π –¥–µ–≤–∞–π—Å –≤ –∫–æ–Ω—Å–æ–ª–∏.
+ - .\adb devices (–Ω–∞—Ö–æ–¥—è—Å—å –≤ –ø–∞–ø–∫–µ —Å adb.exe, –ª–∏–±–æ –º–æ–∂–Ω–æ –ø—Ä–æ–ø–∏—Å–∞—Ç—å –ø—É—Ç—å –≤ —Å–∏—Å—Ç–µ–º–Ω—É—é –ø–µ—Ä–µ–º–µ–Ω–Ω—É—é path)
+ 2. –í—ã–≤–µ—Å—Ç–∏ –∞–¥—Ä–µ—Å –ø—Ä–∏–ª–æ–∂–µ–Ω–∏—è todolist –≤ —Å–∏—Å—Ç–µ–º–µ Android
+ - .\adb shell pm list "packages -f | grep todolist" (–∏–ª–∏ ./adb shell pm list packages -f | findstr todolist)
+ 3. –£—Å—Ç–∞–Ω–æ–≤–∏—Ç—å .apk —Ñ–∞–π–ª –ø—Ä–∏–ª–æ–∂–µ–Ω–∏–∏—è todolist –Ω–∞ —Ç–µ–ª–µ—Ñ–æ–Ω —Å –∫–æ–º–ø—å—é—Ç–µ—Ä–∞ —á–µ—Ä–µ–∑ ADB
+ - .\adb install C:\Users\evgenii\git\001_ToDoList-master\001_ToDoList-master\app\build\outputs\apk\debug\Todolist.apk
+ 4. –°–¥–µ–ª–∞—Ç—å —Å–∫—Ä–∏–Ω—à–æ—Ç –∑–∞–ø—É—â–µ–Ω–Ω–æ–≥–æ –ø—Ä–∏–ª–æ–∂–µ–Ω–∏—è todolist –∏ —Å—Ä–∞–∑—É —Å–∫–æ–ø–∏—Ä–æ–≤–∞—Ç—å –Ω–∞ –∫–æ–º–ø—å—é—Ç–µ—Ä –≤ –æ–¥–Ω–æ–π –∫–æ–º–∞–Ω–¥–µ.
+ - adb shell screencap /storage/emulated/0/DCIM/1246.png && adb pull /storage/emulated/0/DCIM/1246.png C:\Users\evgenii\git\HW\HW_13_ADB\ 
+ (&& –Ω–µ —Ä–∞–±–æ—Ç–∞—é—Ç –≤ power shell, —Å–¥–µ–ª–∞–ª —á–µ—Ä–µ–∑ CMD. –¢–∞–∫ –∂–µ –º–æ–∂–Ω–æ –≤ power shell –º–æ–∂–Ω–æ —á–µ—Ä–µ–∑ |)
+ 5. –í—ã–≤–µ—Å—Ç–∏ –≤ –∫–æ–Ω—Å–æ–ª—å –ª–æ–≥–∏ –ø—Ä–∏–ª–æ–∂–µ–Ω–∏—è todolist
+ - adb shell "logcat | grep -rnw todolist" (–∏–ª–∏ adb logcat | findstr -rnw todolist –≤ CMD)
+ 6. –°–∫–æ–ø–∏—Ä–æ–≤–∞—Ç—å –ª–æ–≥–∏ –ø—Ä–∏–ª–æ–∂–µ–Ω–∏—è todolist –Ω–∞ –∫–æ–º–ø—å—é—Ç–µ—Ä.
+ - adb shell "logcat | grep -rnw todolist" > C:\Users\evgenii\git\HW\HW_13_ADB\log_todolist.log
+ (–ø–µ—Ä–µ–¥ —Ç–µ–º –∫–∞–∫ —Å–∫–æ–ø–∏—Ä–æ–≤–∞—Ç—å –ª–æ–≥–∏, –Ω—É–∂–Ω–æ –ø–æ—á–∏—Å—Ç–∏—Ç—å –∏—Ö adb shell "logcat -c")
+ 7. –£–¥–∞–ª–∏—Ç—å –ø—Ä–∏–ª–æ–∂–µ–Ω–∏–µ todolist —Å —Ç–µ–ª–µ—Ñ–æ–Ω–∞ —á–µ—Ä–µ–∑ ADB
+ - adb uninstall com.android.todolist
+ adb backup -apk -shared -all -f .../backup.ad
+ - —Å–æ—Ö—Ä–∞–Ω–µ–Ω–∏–µ –±—ç–∫–∞–ø–∞ –≤—Å–µ–≥–æ —Ç–µ–ª–µ—Ñ–æ–Ω–∞
+ adb restore .../backup.ad
+ - –≤–æ–∑–≤—Ä–∞—Ç —Ç–µ–ª–µ—Ñ–æ–Ω–∞ –∫ —Å–æ—Ö—Ä–∞–Ω–µ–Ω–Ω–æ–º—É –±—ç–∫–∞–ø—É
