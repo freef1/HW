@@ -7,11 +7,11 @@ ADB HW_1
 Всё в PowerShell 
  1. Отобразить подключённый девайс в консоли.
  - .\adb devices (находясь в папке с adb.exe, либо можно прописать путь в системную переменную path)
- 2. Вывести адрес приложения todolist в системе Android
- - .\adb shell pm list "packages -f | grep todolist" (или ./adb shell pm list packages -f | findstr todolist)
- 3. Установить .apk файл приложениия todolist на телефон с компьютера через ADB
+ 2. Установить .apk файл приложениия todolist на телефон с компьютера через ADB
  - .\adb install C:\Users\evgenii\git\001_ToDoList-master\001_ToDoList-master\app\build\outputs\apk\debug\Todolist.apk
- 4. Сделать скриншот запущенного приложения todolist и сразу скопировать на компьютер в одной команде.
+ 3. Вывести адрес приложения todolist в системе Android
+ - .\adb shell pm list "packages -f | grep todolist" (или ./adb shell pm list packages -f | findstr todolist)
+  4. Сделать скриншот запущенного приложения todolist и сразу скопировать на компьютер в одной команде.
  - adb shell screencap /storage/emulated/0/DCIM/1246.png && adb pull /storage/emulated/0/DCIM/1246.png C:\Users\evgenii\git\HW\HW_13_ADB\ 
  (&& не работают в power shell, сделал через CMD. Так же можно в power shell можно через |)
  5. Вывести в консоль логи приложения todolist
